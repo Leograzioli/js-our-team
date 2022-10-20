@@ -41,8 +41,8 @@ for (let i = 0; i < myTeamArray.length; i++) {
 
     teamList.innerHTML += `
         <li>
-            <img src="img/${element.imgProfile}" alt=""> <br> 
-            Name:${element["name"]}  <br> 
-            Role:${element.role}
+            <img src="img/${element.imgProfile}" alt=""> 
+            <div class="card-name"><span class="title">Name</span>:${element["name"]}<div>
+            <div class="card-name"><span class="title">Role</span>:${element.role}</div>
         </li>`
 }
