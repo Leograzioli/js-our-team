@@ -39,5 +39,10 @@ for (let i = 0; i < myTeamArray.length; i++) {
         console.log(key, element[key]);       
     }
 
-    teamList.innerHTML += `<li><img src="img/${element.imgProfile}" alt=""> <br> Name:${element["name"]}  <br> Role:${element.role}</li>`
+    teamList.innerHTML += `
+        <li>
+            <img src="img/${element.imgProfile}" alt=""> <br> 
+            Name:${element["name"]}  <br> 
+            Role:${element.role}
+        </li>`
 }
