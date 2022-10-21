@@ -1,31 +1,31 @@
 const myTeamArray = [
     {
-    name:"Wayne Barnett",
+    name: "Wayne Barnett",
     role: "Founder & CEO",
     imgProfile: "wayne-barnett-founder-ceo.jpg"
     },
     {
-    name:"Angela Caroll",
+    name: "Angela Caroll",
     role: "Chief Editor",
     imgProfile: "angela-caroll-chief-editor.jpg"
     },
     {
-    name:"Walter Gordon",
+    name: "Walter Gordon",
     role: "Office Manager",
     imgProfile: "walter-gordon-office-manager.jpg"
     },
     {
-    name:"Angela Lopez",
+    name: "Angela Lopez",
     role: "Social Media Manager",
     imgProfile: "angela-lopez-social-media-manager.jpg"
     },
     {
-    name:"Scott Estrada",
+    name: "Scott Estrada",
     role: "Developer",
     imgProfile: "scott-estrada-developer.jpg"
     },
     {
-    name:"Barbara Ramos",
+    name: "Barbara Ramos",
     role: "Graphic Designer",
     imgProfile: "barbara-ramos-graphic-designer.jpg"
     }
@@ -33,14 +33,14 @@ const myTeamArray = [
 
 const teamList = document.getElementById("team-list");
 let teamListHtml = "";
-for (let i = 0; i < myTeamArray.length; i++) {
-    const element = myTeamArray[i];
-
+myTeamArray.forEach(element => {
+    
     teamListHtml += `
         <li>
             <img alt="${element.name}" src="img/${element.imgProfile}" alt=""> 
             <div class="card-name"><span class="title">Name</span>: ${element["name"]}<div>
             <div class="card-name"><span class="title">Role</span>: ${element.role}</div>
         </li>`
-}
+});
+
 teamList.innerHTML = teamListHtml;
