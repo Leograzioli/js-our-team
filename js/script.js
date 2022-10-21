@@ -32,17 +32,15 @@ const myTeamArray = [
 ];
 
 const teamList = document.getElementById("team-list");
+let teamListHtml = "";
 for (let i = 0; i < myTeamArray.length; i++) {
     const element = myTeamArray[i];
 
-    for (let key in element) {
-        console.log(key, element[key]);       
-    }
-
-    teamList.innerHTML += `
+    teamListHtml += `
         <li>
             <img alt="${element.name}" src="img/${element.imgProfile}" alt=""> 
             <div class="card-name"><span class="title">Name</span>: ${element["name"]}<div>
             <div class="card-name"><span class="title">Role</span>: ${element.role}</div>
         </li>`
 }
+teamList.innerHTML = teamListHtml;
